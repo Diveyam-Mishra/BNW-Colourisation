@@ -1,0 +1,25 @@
+# Final Training Configuration
+# Optimized for 4GB GPU, 50 epochs, checkpoint every epoch
+
+# Dataset
+dataset_path: "data/train2014/train2014"
+input_size: [256, 256]
+augmentation_enabled: false
+
+# Training
+epochs: 50
+batch_size: 4  # Reduced for memory efficiency
+learning_rate: 0.0001
+weight_decay: 0.0001
+
+# Loss function
+l1_weight: 1.0
+perceptual_weight: 0.0  # Disabled to save memory
+
+# Memory optimization
+mixed_precision: true
+gradient_checkpointing: false
+
+# Device configuration
+device: "auto"  # auto, cuda, tpu, cpu
+tpu_cores: 8  # Number of TPU cores to use

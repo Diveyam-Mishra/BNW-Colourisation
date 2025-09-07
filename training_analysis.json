@@ -1,0 +1,33 @@
+{
+  "training_attempted": false,
+  "epochs_completed": 3,
+  "best_validation_loss": 0.0972,
+  "final_training_loss": null,
+  "dataset_size": 20,
+  "batch_size": null,
+  "memory_issues": 150,
+  "successful_epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 0.1115,
+      "val_loss": 0.1157
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.0953,
+      "val_loss": 0.1138
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.1049,
+      "val_loss": 0.0972
+    }
+  ],
+  "errors": [],
+  "train_samples": 16,
+  "val_samples": 4,
+  "best_epoch": 3,
+  "model_parameters": "31,042,434",
+  "checkpoints_saved": 0,
+  "checkpoint_files": []
+}

@@ -1,0 +1,34 @@
+# Basic Training Configuration for Image Colorization
+# Optimized for 4GB GPU and week-long training
+
+# Dataset configuration
+dataset_path: "data/train2014/train2014"  # Update this to your dataset path
+validation_split: 0.2
+
+# Model parameters
+input_size: [256, 256]
+batch_size: 8  # Conservative for 4GB GPU
+learning_rate: 0.0001
+
+# Training parameters
+num_epochs: 50  # Reasonable for week-long training
+early_stopping_patience: 15
+
+# Loss function weights
+l1_loss_weight: 1.0
+perceptual_loss_weight: 0.1
+
+# Data augmentation
+augmentation_enabled: true
+
+# Checkpointing (save every epoch for week-long training)
+checkpoint_frequency: 1
+model_save_path: "checkpoints/basic_training/best_model.pth"
+
+# Logging
+log_frequency: 50  # Log every 50 batches
+
+# Memory optimization
+memory_monitoring: true
+auto_batch_reduction: true
+min_batch_size: 2

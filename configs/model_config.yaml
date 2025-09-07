@@ -1,0 +1,20 @@
+# Model Configuration for Image Colorization
+# This file contains parameters for the U-Net colorization model
+
+# Input image dimensions (height, width)
+input_size: [256, 256]
+
+# Training parameters
+batch_size: 16
+learning_rate: 0.0001
+num_epochs: 100
+
+# Loss function weights
+l1_loss_weight: 1.0
+perceptual_loss_weight: 0.1
+
+# Model initialization
+pretrained_encoder: true
+
+# Checkpointing
+checkpoint_frequency: 10

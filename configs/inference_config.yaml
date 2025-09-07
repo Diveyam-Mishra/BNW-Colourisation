@@ -1,0 +1,21 @@
+# Inference Configuration
+inference:
+  # Model settings
+  model_checkpoint_path: "checkpoints/best_model.pth"
+  device: "auto"  # auto, cpu, cuda
+  
+  # Input processing
+  input_size: [256, 256]  # Resize input to this size
+  preserve_aspect_ratio: true
+  
+  # Output settings
+  output_format: "jpg"  # jpg, png, tiff
+  output_quality: 95  # For JPEG compression
+  
+  # Batch processing
+  batch_size: 8
+  max_image_size: [2048, 2048]  # Maximum input size before resizing
+  
+  # Memory management
+  enable_memory_efficient_mode: true
+  patch_size: [512, 512]  # For processing large images in patches
